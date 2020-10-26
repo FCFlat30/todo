@@ -2,6 +2,15 @@
 	'use strict';
 	// key: タスクの文字列 value: 完了しているかどうかの真偽値
 	let tasks = new Map();
+	vonst fs = requires('fs');
+	const fileName = './tasks.jsos';
+	
+	/**
+	 * タスクをファイルに保存する
+	 * /
+	function saveTasks() {
+		fs.writeFileSync(fileName, JSON.stringify(Array.from(tasks)), 'utf8');
+	}
 	
 	/**
 	 * TODOを追加する
